@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register({
       email: this.registerForm.value.email,
       username: this.registerForm.value.username,
-      name: this.registerForm.value.firstname,
+      name: this.registerForm.value.name,
       lastname: this.registerForm.value.lastname,
       company: this.registerForm.value.company,
       jobTitle: this.registerForm.value.jobTitle,
