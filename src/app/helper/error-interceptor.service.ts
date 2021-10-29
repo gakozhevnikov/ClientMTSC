@@ -23,10 +23,10 @@ export class ErrorInterceptorService implements HttpInterceptor{
       const error = err.error.message || err.statusText;
       this.notificationService.showSnackBar(error);
       return throwError(error);
-    }))
+    }));
   }
 }
 
 export const authErrorInterceptorProviders = [
-  {provide: HTTP_INTERCEPTORS, userClass: ErrorInterceptorService, multi: true}
+  {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true}
 ];
