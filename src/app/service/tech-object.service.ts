@@ -12,7 +12,7 @@ export class TechObjectService {
 
   constructor(private http: HttpClient) { }
 
-  getTechObjects (techObject: TechObject):Observable<any>{
+  getTechObjects ():Observable<any>{
     return this.http.get(TECH_OBJECT_URL);
   }
 }
