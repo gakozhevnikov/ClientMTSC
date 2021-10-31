@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
   createRegisterForm(): FormGroup {
     return this.fb.group({
       email: ['', Validators.compose([Validators.required, Validators.email])],
-      username: ['', Validators.compose([Validators.required])],
+      userName: ['', Validators.compose([Validators.required])],
       name: ['', Validators.compose([Validators.required])],
       lastname: ['', Validators.compose([Validators.required])],
       company: ['', Validators.compose([Validators.required])],
@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register({
       email: this.registerForm.value.email,
-      username: this.registerForm.value.username,
+      userName: this.registerForm.value.username,
       name: this.registerForm.value.name,
       lastname: this.registerForm.value.lastname,
       company: this.registerForm.value.company,

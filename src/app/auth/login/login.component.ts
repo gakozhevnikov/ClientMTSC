@@ -32,14 +32,14 @@ export class LoginComponent implements OnInit {
 
   createLoginForm(): FormGroup {
     return this.formBuilder.group({
-      username: ['', Validators.compose([Validators.required])],
+      userName: ['', Validators.compose([Validators.required])],
       password: ['', Validators.compose([Validators.required])],
     });
   }
 
   submit(): void {
     this.authService.login({
-      username: this.loginForm.value.username,
+      userName: this.loginForm.value.username,
       password: this.loginForm.value.password
     }).subscribe(data => {
       console.log(data);
