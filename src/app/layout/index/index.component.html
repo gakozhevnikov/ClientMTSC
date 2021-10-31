@@ -1,1 +1,11 @@
-<p>index works!</p>
+<div *ngIf="isTechObjectsLoaded" class="index-page">
+  <mat-form-field appearance="fill">
+    <mat-label>Выберите объект</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let techObject of techObjects" [value]="techObject.title">
+        {{techObject.title}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
