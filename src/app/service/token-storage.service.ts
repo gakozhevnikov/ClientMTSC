@@ -16,8 +16,7 @@ export class TokenStorageService {
     window.sessionStorage.setItem(TOKEN_KEY, token);
   }
 
-  public getToken(): string {
-    // @ts-ignore
+  public getToken(): string | null {
     return sessionStorage.getItem(TOKEN_KEY);
   }
 
@@ -27,8 +26,7 @@ export class TokenStorageService {
   }
 
   public getUser(): any {
-    // @ts-ignore
-    return JSON.parse(sessionStorage.getItem(USER_KEY));
+    return JSON.parse(<string>sessionStorage.getItem(USER_KEY));
   }
 
   logOut(): void {
