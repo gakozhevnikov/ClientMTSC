@@ -1,6 +1,7 @@
+import {Equipment} from "./Equipment";
 
 
-export interface TechObjectP{
+export interface TechObject {
   id?: number;
   title: string;
   equipment?: Equipment[];

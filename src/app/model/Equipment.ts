@@ -1,4 +1,4 @@
-import {TechObjectP} from "./TechObject";
+import {TechObject} from "./TechObject";
 import {TypeApproval} from "./documents/TypeApproval";
 import {MaintenanceOperations} from "./maintenance/MaintenanceOperations";
 
@@ -7,7 +7,7 @@ export interface Equipment{
   id?: number;
   title: string;
   serialNumber: string;
-  techObject?: TechObjectP[];
+  techObject?: TechObject[];
   typeApproval?: TypeApproval[];
   maintenanceOperations?: MaintenanceOperations[];
 }
