@@ -24,7 +24,7 @@ export class AuthService {
       email: user.email,
       userName: user.userName,
       name: user.name,
-      lastname: user.lastname,
+      lastName: user.lastName,
       password: user.password,
       confirmPassword: user.confirmPassword
     });

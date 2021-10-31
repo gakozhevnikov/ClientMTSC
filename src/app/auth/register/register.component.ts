@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
       email: ['', Validators.compose([Validators.required, Validators.email])],
       userName: ['', Validators.compose([Validators.required])],
       name: ['', Validators.compose([Validators.required])],
-      lastname: ['', Validators.compose([Validators.required])],
+      lastName: ['', Validators.compose([Validators.required])],
       company: ['', Validators.compose([Validators.required])],
       jobTitle: ['', Validators.compose([Validators.required])],
       password: ['', Validators.compose([Validators.required])],
@@ -42,9 +42,9 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register({
       email: this.registerForm.value.email,
-      userName: this.registerForm.value.username,
+      userName: this.registerForm.value.userName,
       name: this.registerForm.value.name,
-      lastname: this.registerForm.value.lastname,
+      lastName: this.registerForm.value.lastName,
       company: this.registerForm.value.company,
       jobTitle: this.registerForm.value.jobTitle,
       password: this.registerForm.value.password,

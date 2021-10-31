@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
 
   submit(): void {
     this.authService.login({
-      userName: this.loginForm.value.username,
+      userName: this.loginForm.value.userName,
       password: this.loginForm.value.password
     }).subscribe(data => {
       console.log(data);
