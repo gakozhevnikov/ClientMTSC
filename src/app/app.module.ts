@@ -14,6 +14,8 @@ import { RegisterComponent } from './auth/register/register.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { IndexComponent } from './layout/index/index.component';
+import {MatSelectModule} from "@angular/material/select";
+import {MatOptionModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { IndexComponent } from './layout/index/index.component';
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   providers: [authInterceptorProviders, authErrorInterceptorProviders],
   bootstrap: [AppComponent]
