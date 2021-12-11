@@ -9,3 +9,15 @@
   </mat-form-field>
 
 </div>
+
+<div *ngIf="isEquipmentsLoaded" class="index-page">
+  <mat-form-field appearance="fill">
+    <mat-label>Выберите оборудование</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let equipment of equipments" [value]="equipment.title">
+        {{equipment.title}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
